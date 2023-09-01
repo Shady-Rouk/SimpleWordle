@@ -66,7 +66,6 @@ class MainActivity : AppCompatActivity() {
         var correctWord = wordSource.getRandomFourLetterWord()
 
         guessButton.setOnClickListener {
-
             val userGuessText = userGuess.text
             userGuess.setText("")     // clearing the text field
             closeKeyboard(userGuess)  // hiding the keyboard
