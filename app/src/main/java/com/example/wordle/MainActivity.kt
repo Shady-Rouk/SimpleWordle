@@ -3,7 +3,6 @@ package com.example.wordle
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -65,7 +64,6 @@ class MainActivity : AppCompatActivity() {
         val userGuess = findViewById<EditText>(R.id.userGuess)
 
         var correctWord = wordSource.getRandomFourLetterWord()
-        Log.v("correct word", correctWord)
         guessButton.setOnClickListener {
             val userGuessText = userGuess.text
             userGuess.setText("")     // clearing the text field
@@ -112,7 +110,6 @@ class MainActivity : AppCompatActivity() {
             resetButton.visibility = View.INVISIBLE
             guessCount = 0
             correctWord = wordSource.getRandomFourLetterWord()
-            Log.v("correct word", correctWord)
 
             userGuess1.text = ""
             userGuess1Eval.text = ""
